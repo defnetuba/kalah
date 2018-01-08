@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Kalah Game with WebSocket</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.0.3/sockjs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+	<script src="/webjars/sockjs-client/socket.js"></script>
+</head>
+<body onload="disconnect()">
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+<div>
+  <div id="conversationDiv">
+        <label>What is your name?</label><input type="text" id="name" />
+         <button id="connect" onclick="connect();">Start Playing</button>
+        <p id="response"></p>
+    </div>
+ 
+       <div id="game" hidden="true">
+            <div id="status">Initializing...</div>
+            <div id="board">
+                <div id="storeA" class="store pit"><div class="pitCount">count</div></div>
+                <div id="houses">
+                    <div id="pitsNorth" class="pit-row">
+                        <div id="houseA5" class="house pit"><div class="pitCount">6</div></div>
+                        <div id="houseA4" class="house pit"><div class="pitCount">6</div></div>
+                        <div id="houseA3" class="house pit"><div class="pitCount">6</div></div>
+                        <div id="houseA2" class="house pit"><div class="pitCount">6</div></div>
+                        <div id="houseA1" class="house pit"><div class="pitCount">6</div></div>
+                        <div id="houseA0" class="house pit"><div class="pitCount">6</div></div>
+                    </div>
+                    <div id="pitsSouth" class="pit-row">
+                        <div id="pit1" class="house pit"><div class="pitCount">6</div></div>
+                        <div id="pit2" class="house pit"><div class="pitCount">6</div></div>
+                        <div id="pit3" class="house pit"><div class="pitCount">6</div></div>
+                        <div id="pit4" class="house pit"><div class="pitCount">6</div></div>
+                        <div id="pit5" class="house pit"><div class="pitCount">6</div></div>
+                        <div id="pit6" class="house pit"><div class="pitCount">6</div></div>
+                    </div>
+                </div>
+                <div id="storeB" class="store pit"><div class="pitCount">count</div></div>
+            </div>
+            <div id="score">
+                <div id="score1" class="score">Player 1: <div id="playerSouth"></div> <span>0</span></div>
+                <div id="score2" class="score">Player 2: <div id="playerNorth"></div><span>0</span></div>
+            </div>
+            <div id="menu">
+               <!--  <button type="button"  id="reset-game-button"><span>Reset</span></button>
+                <button type="button"  id="new-game-button"><span>New Game</span></button>
+                <button type="button"  id="help-button"><span>Help</span></button>
+                --> 
+                <button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
+            </div>
+            <button type="button" id="toggle-history"><span>+ Show History</span></button>
+            <div id="history"></div>
+
+        </div>
+   
+  
+</div>
+</body>
+</html>

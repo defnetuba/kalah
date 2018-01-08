@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: game Maven Webapp
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: DFB
+Implementation-Vendor-Id: com.defne
+Build-Jdk: 1.8.0_151
+Implementation-URL: http://projects.spring.io/spring-boot/game/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: com.defne.game.kalah.controller.Application
+
