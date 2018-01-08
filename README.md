@@ -9,6 +9,8 @@ It is implemented on Java and uses web sockets. (dynamodb implementation started
 and appear it on the browser. It was implemented with stompjs 
 ##Usage
 In order to run the application you need Java 8 and Tomcat 7+.
+Clone the repository from Github:
+$ git clone git://github.com/defnetuba/kalah.git
 
 Navigate into the cloned repository directory
 $ cd kalah
