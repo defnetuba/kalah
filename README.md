@@ -1,4 +1,4 @@
-# kalah
+ # Kalah Game
 
 A web application that runs the game of 6-stone Kalah. For the general rules of the game please refer to Wikipedia: https://en.wikipedia.org/wiki/Kalah. This is a Java based project using Maven for building and managing.
 ##Project's structure
